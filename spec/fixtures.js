@@ -39,15 +39,17 @@ unstringifiableValues = [
 
 parseableStrings = [
   // basic stuff
+  //'test'
+  // '134566'
   '[]',
   '{"foo": ""}',
   '{}',
-  '{"foo": "bar"}',
-  '["one", "two"]',
+  '{"foo": "bar"}', // [{, ", f, o, o, ", ":"}] --> indexof " --> '{"foo" . slice(index, index)
+  '["one", "two"]', // [ '{', "foo", ":", "bar", '}']
   '{"a": "b", "c": "d"}',
   '[null,false,true]',
   '{"foo": true, "bar": false, "baz": null}',
-  '[1, 0, -1, -0.3, 0.3, 1343.32, 3345, 0.00011999999999999999]',
+  '[1, 0, -1, -0.3, 0.3, 1343.32, 3345, 0.00011999999999999999]', //['[', '1', '0', 
   '{"boolean, true": true, "boolean, false": false, "null": null }',
 
   // basic nesting
